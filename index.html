@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marcia Medeiros Engenharia e Design Ltda - Premier nonresidential construction and engineering services in São Paulo. Led by Marcia Juliana Medeiros Amorim.">
+    <title>MARCIA MEDEIROS | Engenharia e Design</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           1. VARIABLES & RESET
+           ========================================= */
+        :root {
+            --primary-blue: #0c2461;        /* Midnight Blue - Trust & Engineering */
+            --accent-copper: #d35400;       /* Copper/Bronze - Construction & Elegance */
+            --concrete-light: #f1f2f6;      /* Light Grey Background */
+            --white: #ffffff;
+            --text-dark: #2f3542;
+            --text-light: #a4b0be;
+            --container-width: 1150px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        a { text-decoration: none; transition: 0.3s; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* =========================================
+           2. UTILITIES
+           ========================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .text-center { text-align: center; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header span {
+            display: block;
+            color: var(--accent-copper);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid var(--primary-blue);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-blue);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* =========================================
+           3. HEADER
+           ========================================= */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--accent-copper);
+            font-weight: 300;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-copper);
+        }
+
+        /* =========================================
+           4. HERO SECTION
+           ========================================= */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(12, 36, 97, 0.7), rgba(12, 36, 97, 0.5)),
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); /* High-end Corporate Building */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 90px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            color: var(--white);
+            margin-bottom: 25px;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        /* =========================================
+           5. ABOUT US
+           ========================================= */
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            color: #57606f;
+        }
+
+        .principal-box {
+            margin-top: 40px;
+            padding: 25px;
+            background: var(--concrete-light);
+            border-left: 4px solid var(--accent-copper);
+        }
+
+        .principal-box h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .principal-box span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-copper);
+        }
+
+        .about-img {
+            position: relative;
+        }
+
+        .about-img img {
+            border-radius: 2px;
+            box-shadow: 30px 30px 0 var(--primary-blue);
+        }
+
+        /* =========================================
+           6. SERVICES
+           ========================================= */
+        .services {
+            background-color: var(--concrete-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 50px 35px;
+            transition: 0.3s;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-copper);
+            transform: scaleX(0);
+            transition: 0.3s;
+            transform-origin: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #747d8c;
+        }
+
+        /* =========================================
+           7. ADVANTAGES
+           ========================================= */
+        .advantages {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .advantages .section-header h2 { color: var(--white); }
+        
+        .adv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .adv-item {
+            text-align: center;
+        }
+
+        .adv-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--accent-copper);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: var(--accent-copper);
+        }
+
+        .adv-item h4 {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .adv-item p {
+            color: #ced6e0;
+            font-weight: 400;
+        }
+
+        /* =========================================
+           8. PROCESS
+           ========================================= */
+        .process {
+            background-color: var(--white);
+        }
+
+        .process-flow {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .process-flow::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: #dfe4ea;
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            background: var(--white);
+            padding: 0 20px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .step-dot {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border: 4px solid var(--accent-copper);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+        }
+
+        /* =========================================
+           9. CONTACT FORM
+           ========================================= */
+        .contact {
+            background-color: var(--concrete-light);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            background: var(--white);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+        }
+
+        .contact-info {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 60px;
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .info-group {
+            margin-bottom: 35px;
+        }
+
+        .info-group span {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-copper);
+            margin-bottom: 8px;
+        }
+
+        .info-group p {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .contact-form {
+            padding: 60px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ced6e0;
+            font-family: 'Lora', serif;
+            background: #fcfcfc;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        textarea.form-control {
+            height: 150px;
+            resize: none;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--accent-copper);
+            border-color: var(--accent-copper);
+        }
+
+        .btn-submit:hover {
+            background-color: transparent;
+            color: var(--accent-copper);
+        }
+
+        /* =========================================
+           10. FOOTER
+           ========================================= */
+        footer {
+            background-color: #1e272e;
+            color: #747d8c;
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 700;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .hero-content h1 { font-size: 3.5rem; }
+            .about-grid, .services-grid, .adv-grid, .contact-wrapper { grid-template-columns: 1fr; }
+            .process-flow { flex-direction: column; gap: 40px; }
+            .process-flow::after { display: none; }
+            .step { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">MARCIA MEDEIROS <span>ENG & DESIGN</span></div>
+            <nav class="nav-links">
+                <a href="#about">Company</a>
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Engineering with Vision.<br>Building with Purpose.</h1>
+            <p>Marcia Medeiros Engenharia e Design Ltda delivers comprehensive nonresidential construction solutions in São Paulo. We merge technical precision with design excellence.</p>
+            <a href="#contact" class="btn btn-outline">Start Your Project</a>
+        </div>
+    </section>
+
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-header" style="text-align: left; margin: 0 0 30px 0;">
+                        <span>Who We Are</span>
+                        <h2>Precision in Every Structure</h2>
+                    </div>
+                    <p>Based in the bustling metropolis of São Paulo, Marcia Medeiros Engenharia e Design Ltda is a specialized firm focused on the nonresidential construction sector. We believe that industrial and commercial buildings require not just strength, but intelligent design.</p>
+                    <p>Under the leadership of Marcia Juliana Medeiros Amorim, our team bridges the gap between engineering logic and architectural aesthetics. We handle complex builds ranging from corporate offices to industrial facilities.</p>
+                    <p>Our approach is holistic: we don't just pour concrete; we engineer environments that foster productivity and stand the test of time.</p>
+                    
+                    <div class="principal-box">
+                        <h4>Marcia Juliana Medeiros Amorim</h4>
+                        <span>Key Principal & Director</span>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Office Architecture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span>What We Do</span>
+                <h2>Core Capabilities</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">&#9874;</div> <h3>Commercial Construction</h3>
+                    <p>Execution of office buildings, retail centers, and corporate hubs in São Paulo. We ensure structural integrity and high-quality finishes for business environments.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#127981;</div> <h3>Industrial Engineering</h3>
+                    <p>Specialized construction for manufacturing plants and warehouses. We design and build robust structures capable of supporting heavy industrial operations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128221;</div> <h3>Structural Design</h3>
+                    <p>Integrated engineering design services. We create detailed structural plans that align with architectural visions, ensuring feasibility and safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span style="color: var(--accent-copper);">Why Choose Us</span>
+                <h2 style="color: var(--white);">The Medeiros Standard</h2>
+            </div>
+            <div class="adv-grid">
+                <div class="adv-item">
+                    <div class="adv-icon-wrapper">&#128105;</div> <h4>Visionary Leadership</h4>
+                    <p>Guided by Marcia Juliana Medeiros Amorim, we bring a focused, detail-oriented perspective to construction management, ensuring no aspect is overlooked.</p>
+                </div>
+                <div class="adv-item">
+                    <div class="adv-icon-wrapper">&#127961;</div> <h4>São Paulo Expertise</h4>
+                    <p>We have deep knowledge of local zoning laws and construction regulations in São Paulo, streamlining the approval process for your project.</p>
+                </div>
+                <div class="adv-item">
+                    <div class="adv-icon-wrapper">&#128208;</div> <h4>Design-Build Synergy</h4>
+                    <p>By combining "Engenharia" and "Design," we offer a seamless workflow. Technical requirements and aesthetic goals are aligned from day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span>Workflow</span>
+                <h2>How We Build</h2>
+            </div>
+            <div class="process-flow">
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <h3>Consultation</h3>
+                    <p>We meet to discuss your project scope in São Paulo, defining technical requirements and design aspirations.</p>
+                </div>
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <h3>Engineering</h3>
+                    <p>Our team develops comprehensive structural plans and architectural drawings ready for execution.</p>
+                </div>
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <h3>Construction</h3>
+                    <p>We manage the build with rigorous oversight, ensuring safety, quality, and adherence to the timeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Let's Build Together</h3>
+                    <p style="color: #dcdde1; margin-bottom: 30px;">Ready to start your nonresidential project in São Paulo? Contact us today for a consultation.</p>
+                    
+                    <div class="info-group">
+                        <span>Location</span>
+                        <p>São Paulo, SP<br>Brazil</p>
+                    </div>
+                    <div class="info-group">
+                        <span>Email</span>
+                        <p>info@marciamedeirosariadesign.info</p>
+                    </div>
+                    <div class="info-group">
+                        <span>Principal</span>
+                        <p>Marcia Juliana Medeiros Amorim</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Project Type (e.g. Industrial, Office)">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-brand">MARCIA MEDEIROS ENGENHARIA</span>
+            <p>&copy; 2023 Marcia Medeiros Engenharia e Design Ltda. All Rights Reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.6;">São Paulo, Brazil | info@marciamedeirosariadesign.info</p>
+        </div>
+    </footer>
+
+</body>
+</html>
